@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="XIBDynamicCollectionViewCell" id="gTV-IL-0wX" customClass="XIBDynamicCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="332"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="332"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X8U-HH-S37">
+                        <rect key="frame" x="20" y="20" width="165" height="100"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="Z2b-7W-Te3"/>
+                        </constraints>
+                    </imageView>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" maximumValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="EdM-Vm-AjI">
+                        <rect key="frame" x="55" y="283" width="94" height="29"/>
+                        <connections>
+                            <action selector="stepperAction:" destination="gTV-IL-0wX" eventType="valueChanged" id="y0N-78-TfN"/>
+                        </connections>
+                    </stepper>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label has had its 'numberOfLines' property set to 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7T-XI-UOy">
+                        <rect key="frame" x="20" y="128" width="165" height="147"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="X8U-HH-S37" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="2Rz-JC-KwY"/>
+                <constraint firstItem="X8U-HH-S37" firstAttribute="trailing" secondItem="m7T-XI-UOy" secondAttribute="trailing" id="6MG-nD-R4t"/>
+                <constraint firstAttribute="bottom" secondItem="EdM-Vm-AjI" secondAttribute="bottom" constant="20" id="CF6-yr-D3T"/>
+                <constraint firstItem="m7T-XI-UOy" firstAttribute="top" secondItem="X8U-HH-S37" secondAttribute="bottom" constant="8" symbolic="YES" id="UaJ-jO-QCC"/>
+                <constraint firstItem="EdM-Vm-AjI" firstAttribute="top" secondItem="m7T-XI-UOy" secondAttribute="bottom" constant="8" symbolic="YES" id="VXz-iX-DzQ"/>
+                <constraint firstItem="X8U-HH-S37" firstAttribute="leading" secondItem="m7T-XI-UOy" secondAttribute="leading" id="lGT-oA-AQ7"/>
+                <constraint firstItem="m7T-XI-UOy" firstAttribute="centerX" secondItem="EdM-Vm-AjI" secondAttribute="centerX" id="t2R-ca-Kjh"/>
+                <constraint firstItem="X8U-HH-S37" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="tC7-Kq-sGc"/>
+                <constraint firstItem="EdM-Vm-AjI" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="v41-In-pw6"/>
+            </constraints>
+            <size key="customSize" width="205" height="332"/>
+            <connections>
+                <outlet property="stepper" destination="EdM-Vm-AjI" id="UHL-za-0si"/>
+                <outlet property="textLabel" destination="m7T-XI-UOy" id="Ygm-gM-YNo"/>
+            </connections>
+            <point key="canvasLocation" x="-187.5" y="134"/>
+        </collectionViewCell>
+    </objects>
+</document>
